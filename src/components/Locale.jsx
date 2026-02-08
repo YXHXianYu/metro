@@ -1,4 +1,5 @@
 import pl from '../localization/pl-pl'
+import zh from '../localization/zh-cn'
 // import it from '../localization/it-it'
 
 // A bit rough attempt to i18n
@@ -14,6 +15,12 @@ switch ( GetNavigatorLanguage() )
     case 'pl-PL':
     case 'pl-pl':
         locale = pl;
+        break;
+    case 'zh':
+    case 'zh-CN':
+    case 'zh-cn':
+    case 'zh-Hans':
+        locale = zh;
         break;
     default:
         locale = {};    // this will default to en

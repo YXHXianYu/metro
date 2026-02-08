@@ -7,6 +7,7 @@ import { InitPreset } from './PresetsLib'
 import Planner from './Planner'
 import Tr from './Locale'
 import PresetsManager from './PresetsManager'
+import PracticeTimer from './PracticeTimer'
 import SvgClock from "./SvgClock";
 import ModePanel from './ModePanel'
 import TrackView from './TrackView/TrackView'
@@ -308,6 +309,11 @@ class SoundMachine extends Component {
 							<SvgClock ref="svgClock" soundLibrary={this.soundLibrary} timeSignature={this.state.timeSignature} track={this.state.track} />
 						</Col>
 
+					</Row>
+					<Row>
+						<Col>
+							<PracticeTimer onTimeUp={() => this.stop()} />
+						</Col>
 					</Row>
 					<Row>
 						<ModePanel
