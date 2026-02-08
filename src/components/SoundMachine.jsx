@@ -40,6 +40,7 @@ class SoundMachine extends Component {
 
 		const config = this.getConfig();
 		this.setPlan(config);
+		this.setBpm(config.constantBpmSlider);
 
 		this.initProgressUpdate();
 		this.documentTitle = document.title;
@@ -130,7 +131,7 @@ class SoundMachine extends Component {
 
 	setBpm = bpm => {
 
-		if (isNaN(bpm) || bpm <= 0 || bpm > 1200) {
+		if (isNaN(bpm) || bpm < 1 || bpm > 200) {
 			throw new Error("Invalid BPM value: " + bpm)
 		}
 
@@ -215,22 +216,22 @@ class SoundMachine extends Component {
 				this.refs.planner.stepForward()
 				break;
 			case 'up':
-				if (this.state.bpm < 1200) {
+				if (this.state.bpm < 200) {
 					this.setBpm(this.state.bpm + 1);
 				}
 				break;
 			case 'down':
-				if (this.state.bpm > 10) {
+				if (this.state.bpm > 1) {
 					this.setBpm(this.state.bpm - 1);
 				}
 				break;
 			case 'shift+up':
-				if (this.state.bpm < 1200) {
+				if (this.state.bpm < 200) {
 					this.setBpm(this.state.bpm + 10);
 				}
 				break;
 			case 'shift+down':
-				if (this.state.bpm > 10) {
+				if (this.state.bpm > 1) {
 					this.setBpm(this.state.bpm - 10);
 				}
 				break;

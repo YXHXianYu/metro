@@ -97,11 +97,8 @@ export const InitPreset_debug = {
 
 
 export const InitPreset = {
-    "bpmStep": 50,
-    "bpmRange": [
-        300,
-        400
-    ],
+    "bpmStep": 5,
+    "bpmRange": [1, 200],
     "playbackMode": "stop",
     "playMode": "constant",
     "stepsNum": 10,
@@ -109,82 +106,15 @@ export const InitPreset = {
     "bpmStepDropdownOpen": false,
     "byTimeInterval": 5,
     "byBarInterval": 2,
-    "constantBpmSlider": 300,
+    "constantBpmSlider": 80,
     "track": [
-        [
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0
-        ],
-        [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0
-        ],
-        [
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0,
-            1,
-            0
-        ],
-        [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-        ]
+        [0, 0, 0, 0],
+        [1, 0, 0, 0],
+        [0, 1, 1, 1],
+        [0, 0, 0, 0]
     ],
-    "timeSignature": 16,
+    "timeSignature": 4,
+    "instrumentKey": "basicdrumkit",
     "samples": [
         {
             "file": "Kick.wav",

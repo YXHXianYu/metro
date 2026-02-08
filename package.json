@@ -24,8 +24,8 @@
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-        "start": "react-scripts --max_old_space_size=8192 start",
-        "build": "react-scripts --max_old_space_size=8192 build",
+        "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts --max_old_space_size=8192 start",
+        "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts --max_old_space_size=8192 build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
@@ -37,5 +37,8 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "devDependencies": {
+        "cross-env": "^7.0.2"
+    }
 }

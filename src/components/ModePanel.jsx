@@ -290,9 +290,9 @@ class ModePanel extends Component {
 							included={false}
 							editInPlace={true}
 							min={Config.MIN_BPM}
-							btnStep={10}
+							btnStep={5}
 							max={Config.MAX_BPM}
-							marks={{ 30: '30', 200: '200', 400: '400', 600: '600', 800: '800', 1000: '1000',  1200: '1200' }}
+							marks={{ 1: '1', 50: '50', 100: '100', 150: '150', 200: '200' }}
 							value={this.state.constantBpmSlider}
 							onChange={this.onBpmSliderChange}
 						/>
