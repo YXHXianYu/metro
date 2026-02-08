@@ -1,4 +1,14 @@
-# metro
+# metro forked version
+
+* 默认参数
+  * 修改了默认的bpm范围为1-200
+  * 修改了默认的bpm调整步长为5
+  * 修改默认节奏型为4/4拍、军鼓+3踩镲
+* 定时器
+  * 可以设置2/5/10min的定时器
+  * 定时器倒计时结束后自动关闭节拍器
+
+# metro (original)
 Speed Trainer Metronome / Drum Machine
 
 Free Online Speed Trainer Metronome/Drum Machine
